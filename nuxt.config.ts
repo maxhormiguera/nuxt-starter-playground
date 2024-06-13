@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+import path from 'path';
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -17,13 +18,25 @@ export default defineNuxtConfig({
       })
     },
   ],
+  typescript: { shim: false },
   vite: {
     vue: {
       template: {
         transformAssetUrls,
       },
     },
+    css: {
+      preprocessorOptions: {
+        stylus: {
+          imports: [path.resolve('./assets/styleResources/globals.styl')]
+        },
+      },
+    },
   },
+  css: [
+    // `/node_modules/modern-normalize/modern-normalize.css`,
+    '/assets/style/main.styl'
+  ],
   eslint: {
     // options here
   }
