@@ -4,13 +4,14 @@ import path from 'path';
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  ssr: false,
   build: {
     transpile: ['vuetify'],
   },
   modules: [
     '@nuxt/eslint',
     '@nuxt/content',
-    '@vueuse/nuxt',
+    '@vueUse/nuxt',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error

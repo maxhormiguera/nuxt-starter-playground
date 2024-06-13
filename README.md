@@ -4,8 +4,11 @@ Installed Nuxt 3
 
 ### Notable Packages:
 * VueUse
+  * Collection of Essential Vue Composition Utilities
 * Vuetify
+  * Vuetify is a no design skills required Open Source UI Library with beautifully handcrafted Vue Components.
 * Stylus-lang
+  * An expressive, robust, feature-rich CSS language built for Node.js
 
 
 ## Setup
