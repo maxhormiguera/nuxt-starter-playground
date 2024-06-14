@@ -4,10 +4,13 @@
 
 <template>
   <header>
-    <v-img :src="imageSrc('carrot-logo.jpg')" height="80" />
+    <div class="container">
+      <v-img :src="imageSrc('carrot-logo.jpg')" height="80" />
+    </div>
   </header>
 </template>
 
 <style scoped lang="stylus">
+
 
 </style>

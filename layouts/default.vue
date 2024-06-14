@@ -23,9 +23,6 @@ main
     grid-area header
   .footer
     grid-area footer
-.container
-  max-width $breakpoint-md
-  margin auto
 </style>
 <script setup lang="ts">
 import PageHeader from '~/components/page-header.vue';
