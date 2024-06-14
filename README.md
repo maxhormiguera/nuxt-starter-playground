@@ -1,20 +1,26 @@
 # MS Nuxt Starter
 ___
-- Nuxt 3
-  - Vite 
-  
-Refer to official documentation.
+### Framework
 - Nuxt 3 [link](https://nuxt.com/docs/getting-started/introduction)
 - Vue [link](https://nuxt.com/docs/getting-started/introduction)
 
 
-### Notable Packages:
+### Notable Packages
 - **VueUse**
   - Collection of Essential Vue Composition Utilities [link](https://vueuse.org/functions.html)
 - **Vuetify**
   - Vuetify is a no design skills required Open Source UI Library with beautifully handcrafted Vue Components. [link](https://vuetifyjs.com/en/getting-started/installation/)
 - **Stylus-lang**
   - An expressive, robust, feature-rich CSS language built for Node.js [link](https://stylus-lang.com/docs/)
+
+### Todo
+- Add
+  - Tests
+  - Use of pinia store
+  - Expected common utils, composables or components
+  - Auth functionality
+  - Security
+  - gtag
 ___
 
 ## Setup
