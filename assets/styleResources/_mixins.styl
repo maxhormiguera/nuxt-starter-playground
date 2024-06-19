@@ -93,12 +93,17 @@ bg-image($url, $size = cover, $position = center, $repeat = no-repeat, $color = 
   if $color
     background-color $color
 
-scrollbar($horizontal = false, $color-thumb = $color-accent1, $width-thumb = 0.5rem, $border-radius-thumb = $border-radius-md, $color-track = $color-theme1, $box-shadow-track = inset 0 0 0.5rem rgba($color-black, 0.5))
+scrollbar(  $horizontal = false,
+  $color-thumb = desaturate($color-primary, 0.6),
+  $width-thumb = $border-radius-md,
+  $border-radius-thumb = $border-radius-md,
+  $color-track = $color-theme,
+  $box-shadow-track = inset $box-shadow-default)
   if $horizontal
     overflow auto hidden
   unless $horizontal
     overflow hidden auto
-  scrollbar-color $color-theme2 $color-theme1
+  scrollbar-color $color-thumb $color-track
   scrollbar-width auto
   scrollbar-width thin
   scrollbar-gutter $width-thumb

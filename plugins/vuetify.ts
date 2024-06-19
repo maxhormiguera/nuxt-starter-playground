@@ -1,8 +1,7 @@
 // import this after install `@mdi/font` package
-import '@mdi/font/css/materialdesignicons.css'
-
-import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
+import '@mdi/font/css/materialdesignicons.css'
+import '@/assets/style/theme.styl'
 
 export default defineNuxtPlugin((app) => {
   const vuetify= createVuetify({

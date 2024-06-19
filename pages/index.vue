@@ -80,9 +80,7 @@
     </v-data-iterator>
   </section>
   <section class="section">
-    <ul>
-      <li>Poop</li>
-    </ul>
+    <tiptap-editor></tiptap-editor>
   </section>
 
 
@@ -112,6 +110,9 @@
 .articles
   background-color var(--background)
   padding 1rem
+  border-radius $border-radius-sm
+  height 45rem
+  scrollbar()
   .__header
     padding 0 1rem 0.5rem
   .__article-card

@@ -29,14 +29,16 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         stylus: {
-          imports: [path.resolve('./assets/styleResources/globals.styl')]
+          imports: [
+            path.resolve('./assets/styleResources/globals.styl'),
+            path.resolve('./assets/style/main.styl')
+          ]
         },
       },
     },
   },
   css: [
-    // `/node_modules/modern-normalize/modern-normalize.css`,
-    '/assets/style/main.styl'
+    // `/node_modules/modern-normalize/modern-normalize.css`, // todo: are css normalizers still necessary?
   ],
   eslint: {
     // options here
