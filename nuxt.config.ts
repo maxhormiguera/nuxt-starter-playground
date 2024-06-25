@@ -30,7 +30,7 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         stylus: {
           imports: [
-            path.resolve('./assets/styleResources/globals.styl'),
+            path.resolve('./assets/styleResources/_globals.styl'),
             path.resolve('./assets/style/main.styl')
           ]
         },
@@ -38,7 +38,7 @@ export default defineNuxtConfig({
     },
   },
   css: [
-    // `/node_modules/modern-normalize/modern-normalize.css`, // todo: are css normalizers still necessary?
+    `/node_modules/modern-normalize/modern-normalize.css`,
   ],
   eslint: {
     // options here

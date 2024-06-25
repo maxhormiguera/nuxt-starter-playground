@@ -4,6 +4,20 @@
     <p>We must feed her... </p>
   </section>
   <section class="section">
+    <v-row>
+      <theme-changer />
+    </v-row>
+  </section>
+  <section class="section">
+    <v-row>
+      <v-btn-group>
+        <v-btn>Default</v-btn>
+        <v-btn active>Active / Hover</v-btn>
+        <v-btn disabled>Hover</v-btn>
+      </v-btn-group>
+    </v-row>
+  </section>
+  <section class="section">
     <v-expansion-panels v-model="openPanel" class="accordion">
       <v-expansion-panel value="0" class="__panel">
         <v-expansion-panel-title class="__title">
@@ -101,20 +115,20 @@
     margin-bottom 2rem
 .accordion
   .__title
-    background-color var(--theme)
-    color var(--accent)
+    /* todo: urghhh, expost vuetify theme variables somehow */
+    //background-color var(--primary)
 .image-card
   padding 1rem
   border-radius $border-radius-lg
   text-align center
 .articles
-  background-color var(--background)
+  //background-color var(--primary)
   padding 1rem
   border-radius $border-radius-sm
   height 45rem
   scrollbar()
   .__header
-    padding 0 1rem 0.5rem
+    padding 1rem 1rem 0.5rem
   .__article-card
     margin 1rem 0
   .__pagination
