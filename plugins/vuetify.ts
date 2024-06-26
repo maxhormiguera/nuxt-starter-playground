@@ -88,6 +88,7 @@ export default defineNuxtPlugin((app) => {
         grape,
         peanut
       },
+      variations: ['lighten']
     }
 
   })

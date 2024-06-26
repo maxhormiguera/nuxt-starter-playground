@@ -10,11 +10,11 @@
   </section>
   <section class="section just-buttons">
     <v-row>
-      <v-btn-toggle variant="tonal" v-model="buttonSelected" divided elevation="24">
-        <v-btn>Default</v-btn>
-        <v-btn>Default</v-btn>
-        <v-btn>Default</v-btn>
-        <v-btn active>Active / Hover</v-btn>
+      <v-btn-toggle variant="flat" v-model="buttonSelected" divided>
+        <v-btn>Ephraim</v-btn>
+        <v-btn>Reverie</v-btn>
+        <v-btn>Qua</v-btn>
+        <v-btn>Active / Hover</v-btn>
         <v-btn disabled>Disabled</v-btn>
       </v-btn-toggle>
     </v-row>
@@ -76,22 +76,24 @@
   </section>
   <section class="section">
     <v-data-iterator :items="articles" :page="articlesPage" class="articles">
-      <template v-slot:default="{items}">
+      <template v-slot:default="{items}" class="__items">
         <template v-for="(item, i) in items" :key="i">
           <v-card v-bind="item.raw" class="__article-card" />
         </template>
       </template>
       <template v-slot:header="{page, pageCount, prevPage, nextPage}">
-        <v-row class="__header align-center">
-          <h4>Data List with pagination</h4>
-          <v-spacer></v-spacer>
-          <div class="__pagination">
-            <v-btn @click="prevPage()" icon="mdi-chevron-left" density="compact" />
-            <div class="text-caption">{{ page }} of {{pageCount}}</div>
-            <v-btn @click="nextPage()" icon="mdi-chevron-right" density="compact" />
-          </div>
-        </v-row>
-        <p class="text-md-subtitle-1">Very similar with data-table</p>
+        <div class="__header">
+          <v-row class="align-center">
+            <h4>Data List with pagination</h4>
+            <v-spacer></v-spacer>
+            <div class="__pagination">
+              <v-btn @click="prevPage()" icon="mdi-chevron-left" density="compact" />
+              <div class="text-caption">{{ page }} of {{pageCount}}</div>
+              <v-btn @click="nextPage()" icon="mdi-chevron-right" density="compact" />
+            </div>
+          </v-row>
+          <p class="text-md-subtitle-1">Very similar with data-table</p>
+        </div>
       </template>
     </v-data-iterator>
   </section>
@@ -130,13 +132,17 @@
   text-align center
 .articles
   background-color var(--theme-surface)
-  //color var(--theme-on-surface)
-  padding 1rem
   border-radius $border-radius-sm
   height 45rem
   scrollbar()
+  .__items
+    padding 1rem
   .__header
-    padding 1rem 1rem 0.5rem
+    background-color var(--theme-secondary)
+    color var(--theme-on-surface)
+    positioning sticky 0 0 false 0
+    padding 2rem 2rem 0.5rem
+    z-index 1
   .__article-card
     margin 1rem 0
   .__pagination
