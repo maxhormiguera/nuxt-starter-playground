@@ -37,15 +37,17 @@ width-height($w, $h = $w)
   width $w
   height $h
 
-media-screen($min = false, $max = false)
+media-screen($min = false, $max = false, $gutter = false)
+  if $gutter
+    $max = 'calc(%s + %s - 1px)' % ($max $gutter)
   if $min && $max
-    @media only screen and (min-width : $min) and (max-width : $max - 1)
+    @media only screen and (min-width : $min) and (max-width : $max)
       { block }
   else if $min and !$max
     @media only screen and (min-width : $min)
       { block }
   else if !$min and $max
-    @media only screen and (max-width : $max - 1)
+    @media only screen and (max-width : $max)
       { block }
 
 flexbox($align = false, $justify = false, $direction = false, $gap = false, $wrap = false,  $inline = false)

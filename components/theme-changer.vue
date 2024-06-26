@@ -6,20 +6,14 @@ const theme = useTheme()
 const changeTheme = (themeName:string) => {
   theme.global.name.value = themeName
 }
-
-console.log('::: theme ', theme)
+const themeSelected = ref(theme.global.name.value)
 </script>
 
 <template>
-<v-btn-group class="theme-select">
+<v-btn-toggle class="theme-select" divided v-model="themeSelected" >
   <v-btn append-icon="mdi-carrot" @click="changeTheme('carrot')">carrot</v-btn>
   <v-btn append-icon="mdi-fruit-grapes" @click="changeTheme('grape')">grape</v-btn>
   <v-btn append-icon="mdi-peanut" @click="changeTheme('peanut')">peanut</v-btn>
   <v-btn append-icon="mdi-fruit-watermelon">watermelon</v-btn>
-</v-btn-group>
+</v-btn-toggle>
 </template>
-
-<style scoped lang="stylus">
-.theme-select
-  gap 0.125rem
-</style>

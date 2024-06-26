@@ -8,13 +8,15 @@
       <theme-changer />
     </v-row>
   </section>
-  <section class="section">
+  <section class="section just-buttons">
     <v-row>
-      <v-btn-group>
+      <v-btn-toggle variant="tonal" v-model="buttonSelected" divided elevation="24">
+        <v-btn>Default</v-btn>
+        <v-btn>Default</v-btn>
         <v-btn>Default</v-btn>
         <v-btn active>Active / Hover</v-btn>
-        <v-btn disabled>Hover</v-btn>
-      </v-btn-group>
+        <v-btn disabled>Disabled</v-btn>
+      </v-btn-toggle>
     </v-row>
   </section>
   <section class="section">
@@ -108,21 +110,27 @@
     text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. '
   }))
   const articlesPage = ref(1)
+  const buttonSelected = ref(null)
 </script>
 <style lang="stylus">
 .section
   &:not(:last-of-type)
     margin-bottom 2rem
+.just-buttons
+  background-color var(--theme-surface)
+  color var(--theme-primary)
 .accordion
   .__title
-    /* todo: urghhh, expost vuetify theme variables somehow */
-    //background-color var(--primary)
+    /* todo: urghhh, expose vuetify theme variables somehow */
+    background-color var(--theme-secondary)
+    color inherit
 .image-card
   padding 1rem
   border-radius $border-radius-lg
   text-align center
 .articles
-  //background-color var(--primary)
+  background-color var(--theme-surface)
+  //color var(--theme-on-surface)
   padding 1rem
   border-radius $border-radius-sm
   height 45rem
