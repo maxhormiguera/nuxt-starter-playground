@@ -31,7 +31,6 @@ export default defineNuxtPlugin((app) => {
       'theme-code': '#f5f5f5',
       'theme-on-code': '#000000',
     }
-
   }
   const grape = {
     dark: true,
@@ -76,7 +75,6 @@ export default defineNuxtPlugin((app) => {
       'warning': '#992211',
       'error': '#ee2222',
     },
-
   }
 
   const vuetify= createVuetify({
@@ -88,7 +86,11 @@ export default defineNuxtPlugin((app) => {
         grape,
         peanut
       },
-      variations: ['lighten']
+      variations: {
+        colors: ['primary', 'secondary'],
+        lighten: 1,
+        darken: 2,
+      }
     }
 
   })

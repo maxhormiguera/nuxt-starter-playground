@@ -17,8 +17,6 @@ const themeColors = computed(() => {
   for(const key of Object.keys(theme.current.value.colors)) {
     c[`--theme-${key}`] = theme.current.value.colors[key]
   }
-  console.log('::: c ', c
-  )
   return c
 })
 </script>

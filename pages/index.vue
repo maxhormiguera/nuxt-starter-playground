@@ -33,7 +33,7 @@
                   <p>stars</p>
                 </template>
                 <template v-slot:item>
-                  <v-img :src="imageSrc('stars.jpg')" height="400"></v-img>
+                  <v-img :src="imageSrc('stars.jpg')" height="400" cover></v-img>
                 </template>
               </v-card>
             </v-col>
@@ -43,7 +43,7 @@
                   <p>ascending and descending</p>
                 </template>
                 <template v-slot:item>
-                  <v-img :src="imageSrc('ascending and descending.jpg')" height="400"/>
+                  <v-img :src="imageSrc('ascending and descending.jpg')" height="400" cover/>
                 </template>
               </v-card>
             </v-col>
@@ -53,9 +53,9 @@
                   <p>nothing</p>
                 </template>
                 <template v-slot:item>
-                  <v-img :src="imageSrc('does not exist.jpg')" height="400">
+                  <v-img :src="imageSrc('does not exist.jpg')" height="400" cover>
                     <template v-slot:placeholder>
-                      <v-skeleton-loader type="image" height="400" />
+                      <v-skeleton-loader type="image" height="100%" cover/>
                     </template>
                   </v-img>
                 </template>
@@ -118,6 +118,8 @@
 .section
   &:not(:last-of-type)
     margin-bottom 2rem
+  .v-row
+    margin 0
 .just-buttons
   background-color var(--theme-surface)
   color var(--theme-primary)
