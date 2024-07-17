@@ -30,7 +30,8 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         stylus: {
           imports: [
-            path.resolve('./assets/styleResources/_globals.styl'),
+            path.resolve('./assets/styleResources/_variables.styl'),
+            path.resolve('./assets/styleResources/_mixins.styl'),
             path.resolve('./assets/style/main.styl')
           ]
         },

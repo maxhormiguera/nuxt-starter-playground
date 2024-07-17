@@ -59,9 +59,13 @@ const editor = useEditor({
       &:active
         outline none
         box-shadow 0 0 0.25rem var(--theme-surface)
-    .is-editor-empty:before
-      content attr(data-placeholder)
-      display block
+        .is-editor-empty:before
+          display none
+      .is-editor-empty
+        &:before
+          content attr(data-placeholder)
+          display block
+          height 0
 
 
 </style>

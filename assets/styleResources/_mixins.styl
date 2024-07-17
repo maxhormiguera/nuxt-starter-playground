@@ -106,7 +106,6 @@ scrollbar(  $horizontal = false,
   unless $horizontal
     overflow hidden auto
   scrollbar-color $color-thumb $color-track
-  scrollbar-width auto
   scrollbar-width thin
   scrollbar-gutter $width-thumb
   scroll-behavior smooth
@@ -150,3 +149,7 @@ on-circle($item-count = 6, $circle-size = 5rem, $item-size = 0.5rem)
       &:nth-of-type({$i})
         transform rotate($rot * 1deg) translate($circle-size/2)
       $rot = ($rot + $angle)
+
+/* important function to transform css color variables */
+blend-color($color1 = #000, $color2 = #fff, $amt = 50%)
+  'color-mix(in srgb, %s, %s %s)' % ($color1 $color2 $amt)

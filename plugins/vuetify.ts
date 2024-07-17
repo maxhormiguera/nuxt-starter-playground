@@ -90,8 +90,14 @@ export default defineNuxtPlugin((app) => {
         colors: ['primary', 'secondary'],
         lighten: 1,
         darken: 2,
+      },
+    },
+    defaults: {
+      VRow: {
+        style: [{margin: '0'}]
       }
     }
+
 
   })
   app.vueApp.use(vuetify)

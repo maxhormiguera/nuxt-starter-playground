@@ -15,18 +15,14 @@ const logo = computed(() =>
   <header>
     <div class="container">
       <v-icon :icon="logo" ></v-icon>
-      {{logo}}
+      <span>{{logo}}</span>
     </div>
   </header>
 </template>
 
 <style scoped lang="stylus">
-@css {
-  header {
-    background-color: color-mix(in srgb, var(--theme-background), #000 20%);
-    color: color-mix(in srgb, var(--theme-primary), #fff 20%);
-  }
-}
-
-
+header
+  font-size 2.25rem
+  background-color blend-color(var(--theme-background), #000, 30%)
+  color blend-color(var(--theme-background), #fff, 50%)
 </style>

@@ -9,15 +9,19 @@
     </v-row>
   </section>
   <section class="section just-buttons">
-    <v-row>
-      <v-btn-toggle variant="flat" v-model="buttonSelected" divided>
-        <v-btn>Ephraim</v-btn>
-        <v-btn>Reverie</v-btn>
-        <v-btn>Qua</v-btn>
-        <v-btn>Active / Hover</v-btn>
-        <v-btn disabled>Disabled</v-btn>
-      </v-btn-toggle>
-    </v-row>
+    <v-btn-toggle variant="flat" v-model="buttonSelected" divided class="just-buttons-row">
+      <v-btn>Ephraim</v-btn>
+      <v-btn>Reverie</v-btn>
+      <v-btn>Qua</v-btn>
+      <v-btn>Active / Hover</v-btn>
+      <v-btn disabled>Disabled</v-btn>
+    </v-btn-toggle>
+    <v-chip-group>
+      <v-chip>Bruhh</v-chip>
+      <v-chip>Bro</v-chip>
+      <v-chip>Brother</v-chip>
+      <v-chip>Brewski</v-chip>
+    </v-chip-group>
   </section>
   <section class="section">
     <v-expansion-panels v-model="openPanel" class="accordion">
@@ -116,16 +120,17 @@
 </script>
 <style lang="stylus">
 .section
+  border-radius 0.25rem
   &:not(:last-of-type)
     margin-bottom 2rem
-  .v-row
-    margin 0
 .just-buttons
   background-color var(--theme-surface)
   color var(--theme-primary)
+  padding 0.5rem
+  .just-buttons-row
+    flex-wrap wrap
 .accordion
   .__title
-    /* todo: urghhh, expose vuetify theme variables somehow */
     background-color var(--theme-secondary)
     color inherit
 .image-card
@@ -135,8 +140,6 @@
 .articles
   background-color var(--theme-surface)
   border-radius $border-radius-sm
-  height 45rem
-  scrollbar()
   .__items
     padding 1rem
   .__header
