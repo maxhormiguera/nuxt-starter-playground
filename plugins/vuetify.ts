@@ -9,6 +9,7 @@ export default defineNuxtPlugin((app) => {
       'primary': '#fbb03b',
       'secondary': '#442288',
       'surface': '#334422',
+      'surface-light': 'color-mix(in srgb, #334422, #fff 60%)',
       'success': '#99cc22',
       'warning': '#6a041d',
       'error': '#330f0a',

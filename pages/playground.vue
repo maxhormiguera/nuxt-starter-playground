@@ -102,6 +102,7 @@
     </v-data-iterator>
   </section>
   <section class="section">
+    <h4 id="tiptapeditor">Editor</h4>
     <tiptap-editor></tiptap-editor>
   </section>
 
