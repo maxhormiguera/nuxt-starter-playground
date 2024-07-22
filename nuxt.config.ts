@@ -32,7 +32,6 @@ export default defineNuxtConfig({
           imports: [
             path.resolve('./assets/styleResources/_variables.styl'),
             path.resolve('./assets/styleResources/_mixins.styl'),
-            path.resolve('./assets/style/main.styl')
           ]
         },
       },
@@ -40,6 +39,7 @@ export default defineNuxtConfig({
   },
   css: [
     `/node_modules/modern-normalize/modern-normalize.css`,
+    '/assets/style/main.styl'
   ],
   eslint: {
     // options here

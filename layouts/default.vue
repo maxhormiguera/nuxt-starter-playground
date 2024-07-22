@@ -17,6 +17,7 @@ main
   grid-template-columns 1fr minmax(10rem, 15%)
   grid-template-rows $header-height auto $footer-height
   grid-template-areas 'header header' 'body body' 'footer footer'
+  min-height 100vh
   .content
     grid-area body
   .header
