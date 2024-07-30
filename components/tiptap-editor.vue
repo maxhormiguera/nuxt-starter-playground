@@ -43,24 +43,25 @@ const editor = useEditor({
 
 <style lang="stylus" scoped>
 .editor-wrapper
-  background-color var(--theme-surface-light)
   .__menu
+    background-color var(--theme-tertiary-lighten-4)
     border 1px solid $border-color
     border-bottom none
     border-radius $border-radius-md $border-radius-md 0 0
     padding 0.25rem
     flexbox center space-between row 1rem
+  .__btn
+    background var(--theme-tertiary-lighten-1)
   &:deep()
-    &:has(.tiptap:focus)
-      box-shadow 0 0 0.25rem var(--theme-surface)
-    .tiptap
-      border 1px solid $border-color
+    .__editor
+      background-color var(--theme-tertiary-lighten-4)
       border-radius 0 0 $border-radius-md $border-radius-md
+      border 1px solid $border-color
       padding 2rem 1rem
+    .tiptap
       &:focus
       &:active
         outline none
-
         .is-editor-empty:before
           display none
       .is-editor-empty

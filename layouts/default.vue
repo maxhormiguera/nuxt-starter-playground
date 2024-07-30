@@ -20,6 +20,7 @@ main
   min-height 100vh
   .content
     grid-area body
+    padding 1rem 0
   .header
     grid-area header
   .footer
