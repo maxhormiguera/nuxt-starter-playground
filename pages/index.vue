@@ -67,7 +67,7 @@ const buttonSelected = ref(null)
   .just-buttons-row
     flex-wrap wrap
 .__card
-  background-color var(--theme-secondary-lighten-3)
+  background-color var(--theme-secondary)
   font-family 'PlaywriteCU'
   padding 1rem
   width clamp(16rem, 20%, 32rem)
