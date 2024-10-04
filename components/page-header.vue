@@ -14,8 +14,11 @@ const logo = computed(() =>
 <template>
   <header>
     <div class="container">
-      <v-icon :icon="logo" ></v-icon>
-      <span>{{logo}}</span>
+      <nuxt-link to="/">
+        <v-icon :icon="logo" ></v-icon>
+        <span>{{logo}}</span>
+      </nuxt-link>
+
     </div>
   </header>
 </template>
