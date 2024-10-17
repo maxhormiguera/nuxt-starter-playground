@@ -1,5 +1,11 @@
 <script setup lang="ts">
+import {useSampleStore} from '~/stores/samples';
+
 const buttonSelected = ref(null)
+
+const {posts, getPosts} = useSampleStore()
+getPosts()
+console.log(':: posts ', posts)
 </script>
 <template>
   <section class="section">

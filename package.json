@@ -10,6 +10,7 @@
   "dependencies": {
     "@mdi/font": "^7.4.47",
     "@nuxt/content": "^2.12.1",
+    "@pinia/nuxt": "^0.5.5",
     "@tiptap/extension-history": "^2.4.0",
     "@tiptap/extension-link": "^2.8.0",
     "@tiptap/extension-placeholder": "^2.4.0",
@@ -20,6 +21,8 @@
     "@vueuse/core": "^10.11.0",
     "@vueuse/nuxt": "^10.11.0",
     "modern-normalize": "^2.0.0",
+    "nuxt": "^3.13.2",
+    "pinia": "^2.2.4",
     "stlint": "^1.0.65",
     "stylus": "^0.63.0"
   },
@@ -28,5 +31,8 @@
     "eslint": "^8.57.0",
     "vite-plugin-vuetify": "^2.0.3",
     "vuetify": "^3.6.9"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }

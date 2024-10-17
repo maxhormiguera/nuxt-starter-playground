@@ -12,12 +12,12 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/content',
     '@vueUse/nuxt',
-    (_options, nuxt) => {
-      nuxt.hooks.hook('vite:extendConfig', (config) => {
-        // @ts-expect-error
+    (_options:any, nuxt:any) => {
+      nuxt.hooks.hook('vite:extendConfig', (config:any) => {
         config.plugins.push(vuetify({ autoImport: true }))
       })
     },
+    '@pinia/nuxt'
   ],
   typescript: { shim: false },
   vite: {
@@ -43,5 +43,6 @@ export default defineNuxtConfig({
   ],
   eslint: {
     // options here
-  }
+  },
+  compatibilityDate: '2024-10-17'
 })
