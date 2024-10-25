@@ -4,16 +4,21 @@ import {useTheme} from 'vuetify'
 const theme = useTheme()
 
 const changeTheme = (themeName:string) => {
+  console.log('::: themeName ', themeName)
   theme.global.name.value = themeName
 }
 const themeSelected = ref(theme.global.name.value)
+
+const themes = [
+  {value: 'carrot', icon: 'mdi-carrot' },
+  {value: 'grape', icon: 'mdi-fruit-grapes' },
+  {value: 'peanut', icon: 'mdi-peanut' },
+  {value: 'watermelon', icon: 'mdi-fruit-watermelon' },
+]
 </script>
 
 <template>
-<v-btn-toggle class="theme-select" divided v-model="themeSelected" >
-  <v-btn append-icon="mdi-carrot" @click="changeTheme('carrot')">carrot</v-btn>
-  <v-btn append-icon="mdi-fruit-grapes" @click="changeTheme('grape')">grape</v-btn>
-  <v-btn append-icon="mdi-peanut" @click="changeTheme('peanut')">peanut</v-btn>
-  <v-btn append-icon="mdi-fruit-watermelon">watermelon</v-btn>
-</v-btn-toggle>
+  <v-btn-toggle class="theme-select" divided v-model="themeSelected" color="secondary" @update:model-value="changeTheme(themeSelected)" >
+    <v-btn v-for="{value, icon} in themes" :text="value" :prepend-icon="icon" :value="value" />
+  </v-btn-toggle>
 </template>

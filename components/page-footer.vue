@@ -15,7 +15,9 @@
         <v-col>
           <nuxt-link to="https://vuetifyjs.com/en/components/all/#containment">Vuetify Components</nuxt-link>
         </v-col>
-
+        <v-col>
+          <nuxt-link to="https://fontawesome.com/search">Browse Fontawesome Icons</nuxt-link>
+        </v-col>
       </v-row>
     </div>
   </footer>
