@@ -1,4 +1,5 @@
 # MS Nuxt Starter
+ - Forkable project for a quick Nuxt project with my preferred configs
 ___
 ### Framework
 - Nuxt 3 [link](https://nuxt.com/docs/getting-started/introduction)
